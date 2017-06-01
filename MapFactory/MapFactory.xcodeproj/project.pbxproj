@@ -35,6 +35,10 @@
 		4658F0581ED6EDD600E4138B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658F0571ED6EDD600E4138B /* JavaScriptCore.framework */; };
 		4658F05A1ED6EDDE00E4138B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658F0591ED6EDDE00E4138B /* libz.tbd */; };
 		4658F05C1ED6EDF000E4138B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4658F05B1ED6EDF000E4138B /* libc++.tbd */; };
+		46965A6F1ED828A200FD55BE /* AppleComputerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46965A6E1ED828A200FD55BE /* AppleComputerFactory.m */; };
+		46965A721ED8290500FD55BE /* AppleComputer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46965A711ED8290500FD55BE /* AppleComputer.m */; };
+		46965A931ED83FB300FD55BE /* BaiduMapFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 46965A901ED83FB300FD55BE /* BaiduMapFactory.m */; };
+		46965A971ED83FF000FD55BE /* BaiduMapView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 46965A961ED83FF000FD55BE /* BaiduMapView1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,18 @@
 		4658F0571ED6EDD600E4138B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4658F0591ED6EDDE00E4138B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4658F05B1ED6EDF000E4138B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		46965A6A1ED8265400FD55BE /* IComputerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IComputerFactory.h; path = FactoryMethod/Simple/IComputerFactory.h; sourceTree = "<group>"; };
+		46965A6B1ED8278700FD55BE /* IComputer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IComputer.h; path = FactoryMethod/Simple/IComputer.h; sourceTree = "<group>"; };
+		46965A6D1ED828A200FD55BE /* AppleComputerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleComputerFactory.h; path = FactoryMethod/Simple/impl/AppleComputerFactory.h; sourceTree = "<group>"; };
+		46965A6E1ED828A200FD55BE /* AppleComputerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppleComputerFactory.m; path = FactoryMethod/Simple/impl/AppleComputerFactory.m; sourceTree = "<group>"; };
+		46965A701ED8290500FD55BE /* AppleComputer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleComputer.h; path = FactoryMethod/Simple/impl/AppleComputer.h; sourceTree = "<group>"; };
+		46965A711ED8290500FD55BE /* AppleComputer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppleComputer.m; path = FactoryMethod/Simple/impl/AppleComputer.m; sourceTree = "<group>"; };
+		46965A851ED83F9700FD55BE /* IMapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMapFactory.h; sourceTree = "<group>"; };
+		46965A861ED83F9700FD55BE /* IMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMapView.h; sourceTree = "<group>"; };
+		46965A8F1ED83FB300FD55BE /* BaiduMapFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapFactory.h; sourceTree = "<group>"; };
+		46965A901ED83FB300FD55BE /* BaiduMapFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapFactory.m; sourceTree = "<group>"; };
+		46965A951ED83FF000FD55BE /* BaiduMapView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapView1.h; sourceTree = "<group>"; };
+		46965A961ED83FF000FD55BE /* BaiduMapView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapView1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +141,7 @@
 		4658EFF21ED6D74600E4138B /* MapFactory */ = {
 			isa = PBXGroup;
 			children = (
+				46965A671ED8023A00FD55BE /* FactoryMethod */,
 				4658F00A1ED6D79600E4138B /* Factory */,
 				4658EFF61ED6D74600E4138B /* AppDelegate.h */,
 				4658EFF71ED6D74600E4138B /* AppDelegate.m */,
@@ -246,6 +263,58 @@
 			name = gaode;
 			sourceTree = "<group>";
 		};
+		46965A671ED8023A00FD55BE /* FactoryMethod */ = {
+			isa = PBXGroup;
+			children = (
+				46965A841ED83F9700FD55BE /* Map */,
+				46965A681ED8249500FD55BE /* Simple */,
+			);
+			name = FactoryMethod;
+			sourceTree = "<group>";
+		};
+		46965A681ED8249500FD55BE /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				46965A6C1ED8287300FD55BE /* impl */,
+				46965A6A1ED8265400FD55BE /* IComputerFactory.h */,
+				46965A6B1ED8278700FD55BE /* IComputer.h */,
+			);
+			name = Simple;
+			sourceTree = "<group>";
+		};
+		46965A6C1ED8287300FD55BE /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				46965A6D1ED828A200FD55BE /* AppleComputerFactory.h */,
+				46965A6E1ED828A200FD55BE /* AppleComputerFactory.m */,
+				46965A701ED8290500FD55BE /* AppleComputer.h */,
+				46965A711ED8290500FD55BE /* AppleComputer.m */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		46965A841ED83F9700FD55BE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				46965A8E1ED83FB300FD55BE /* impl */,
+				46965A851ED83F9700FD55BE /* IMapFactory.h */,
+				46965A861ED83F9700FD55BE /* IMapView.h */,
+			);
+			name = Map;
+			path = FactoryMethod/Map;
+			sourceTree = "<group>";
+		};
+		46965A8E1ED83FB300FD55BE /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				46965A8F1ED83FB300FD55BE /* BaiduMapFactory.h */,
+				46965A901ED83FB300FD55BE /* BaiduMapFactory.m */,
+				46965A951ED83FF000FD55BE /* BaiduMapView1.h */,
+				46965A961ED83FF000FD55BE /* BaiduMapView1.m */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +346,7 @@
 				TargetAttributes = {
 					4658EFEF1ED6D74600E4138B = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2STZ5AM32F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -320,9 +390,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4658EFFB1ED6D74600E4138B /* ViewController.m in Sources */,
+				46965A971ED83FF000FD55BE /* BaiduMapView1.m in Sources */,
+				46965A931ED83FB300FD55BE /* BaiduMapFactory.m in Sources */,
 				4658F00D1ED6D7BF00E4138B /* MapFactory.m in Sources */,
 				4658EFF81ED6D74600E4138B /* AppDelegate.m in Sources */,
+				46965A6F1ED828A200FD55BE /* AppleComputerFactory.m in Sources */,
 				4658EFF51ED6D74600E4138B /* main.m in Sources */,
+				46965A721ED8290500FD55BE /* AppleComputer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2STZ5AM32F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MapFactory/Factory/libs/baidu",
@@ -463,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2STZ5AM32F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MapFactory/Factory/libs/baidu",
@@ -499,6 +575,7 @@
 				4658F0091ED6D74600E4138B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

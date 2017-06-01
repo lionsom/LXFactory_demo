@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 
-//#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
-//#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
 
 //#import <MAMapKit/MAMapKit.h>
 //#import <AMapFoundationKit/AMapFoundationKit.h>
@@ -25,12 +25,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    BMKMapManager * _mapManager = [[BMKMapManager alloc]init];
-//    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-//    BOOL ret = [_mapManager start:@"8pWkXFMFuUkB64oHx5HEFNcm1DQgUpl0"  generalDelegate:nil];
-//    if (!ret) {
-//        NSLog(@"manager start failed!");
-//    }
+    BMKMapManager * _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"8pWkXFMFuUkB64oHx5HEFNcm1DQgUpl0"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
     
     
     //高德地图

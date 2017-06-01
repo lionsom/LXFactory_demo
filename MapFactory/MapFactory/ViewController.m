@@ -17,6 +17,18 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
+#import "IComputer.h"
+#import "IComputerFactory.h"
+
+#import "AppleComputer.h"
+#import "AppleComputerFactory.h"
+
+#import "IMapView.h"
+#import "IMapFactory.h"
+#import "BaiduMapView1.h"
+#import "BaiduMapFactory.h"
+
+
 @interface ViewController ()
 //百度地图
 @property (nonatomic, strong) BMKMapView * mapView;
@@ -43,11 +55,34 @@
     
     
     //简单工厂进行设计
-    MapFactory * factory = [MapFactory sharedInstance:1];
-    UIView * view = [factory getView:self.view.frame];
-    self.view = view;
+//    MapFactory * factory = [MapFactory sharedInstance:1];
+//    UIView * view = [factory getView:self.view.frame];
+//    self.view = view;
+    
+    
+    //工厂方法-原理测试
+//    id<IComputerFactory> factory = [[AppleComputerFactory alloc] init];
+//    id<IComputer> computer = [factory getComputer];
+//    [computer Create];
+    
+    
+    id<IMapFactory> factory = [[BaiduMapFactory alloc] init];
+    id<IMapView> mapView = [factory getView:self.view.frame];
+    [self.view addSubview:[mapView getView]];
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
