@@ -28,6 +28,15 @@
 #import "BaiduMapView1.h"
 #import "BaiduMapFactory.h"
 
+//抽象工厂
+#import "AbsComputerFactory.h"
+#import "AbsComputerCpu.h"
+#import "AbsAppleComputerDisplaycard.h"
+
+#import "AbsAppleComputerFactory.h"
+#import "AbsComputerCpu.h"
+#import "AbsAppleComputerDisplaycard.h"
+
 
 @interface ViewController ()
 //百度地图
@@ -65,10 +74,17 @@
 //    id<IComputer> computer = [factory getComputer];
 //    [computer Create];
     
+    //工厂方法-案例演示
+//    id<IMapFactory> factory = [[BaiduMapFactory alloc] init];
+//    id<IMapView> mapView = [factory getView:self.view.frame];
+//    [self.view addSubview:[mapView getView]];
     
-    id<IMapFactory> factory = [[BaiduMapFactory alloc] init];
-    id<IMapView> mapView = [factory getView:self.view.frame];
-    [self.view addSubview:[mapView getView]];
+    //抽象工厂-原理测试
+    id<AbsComputerFactory> factory = [[AbsAppleComputerFactory alloc]init];
+    id<AbsComputerCpu> cpu = [factory getCpu];
+    [cpu printInfo];
+    id<AbsComputerDisplaycard> displaycard = [factory getDisplaycard];
+    [displaycard printInfo];
     
 }
 
